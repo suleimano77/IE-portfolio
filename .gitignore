@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Raw datasets (download them again from the link in each project's README)
+**/data/*
+!**/data/.gitkeep
+
+# Excel lock files and OS junk
+~$*
+Thumbs.db
+desktop.ini
