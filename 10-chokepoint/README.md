@@ -1,20 +1,22 @@
-# 🚢 CHOKEPOINT: supply chain shock digital twin
+# CHOKEPOINT
 
-> **Status: planned for Jan–Apr 2027.** This page states the problem. Results will replace the targets below as they arrive.
+Status: not started. Planned for January to April 2027.
 
-## The problem
-Since 2024, attacks in the Red Sea have pushed container ships around the Cape of Good Hope, adding weeks to Asia–Europe and Asia–Middle East voyages. A fictional importer supplies two warehouses, **Aqaba (Jordan)** and **Hamburg (Germany)**, from Asian suppliers. How much buffer stock does it need, where, and when should it switch routes?
+## The question
 
-## Approach (built in rungs; each rung is shippable)
-1. **Lead-time shock:** real chokepoint transit data (IMF PortWatch) in DuckDB → lead-time distributions before and during disruption → safety stock that holds 95% service.
-2. **Forecasting:** statistical baselines vs LightGBM, backtested.
-3. **Digital twin:** SimPy model of ships, ports and warehouses; replay historic and hypothetical closures.
-4. **Optimization:** sourcing split, route mix and buffer stock that minimise cost across scenarios.
-5. **Scenario analyst:** a Streamlit app where an LLM runs the twin to answer "what if" questions.
+Since 2024 many container ships have avoided the Red Sea and gone around Africa instead, which adds weeks to the trip from Asia. Take an importer with one warehouse in Aqaba and one in Hamburg, both supplied from Asia. How much safety stock does it need in each, and when is it worth paying for a different route?
 
-## Target headline
-"Under a 12-week closure, the recommended policy holds 95% service at X% lower cost than a static policy."
+## How I plan to build it
+
+I'll build it in steps, and each step should be usable on its own:
+
+1. Load daily ship transit counts for Suez, Bab el-Mandeb and the Cape (IMF PortWatch) into DuckDB and turn them into lead-time distributions before and during the disruption. Set reorder points and safety stock that keep a 95% service level.
+2. Forecast demand, comparing simple baselines with LightGBM on the M5 retail dataset.
+3. Simulate ships, ports and warehouses in SimPy, and replay past and made-up closures.
+4. Choose the sourcing split and buffer stock that minimise cost across those scenarios (PuLP).
+5. Put it in a small Streamlit app where you can ask "what if the strait closes for 12 weeks?" and get the simulation's answer.
 
 ## Data
-- IMF PortWatch: daily chokepoint transits and port calls
-- M5 retail demand (Kaggle), mapped to the importer's catalogue
+
+- IMF PortWatch: chokepoint transits and port calls
+- M5 forecasting dataset (Kaggle)

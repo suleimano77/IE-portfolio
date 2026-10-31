@@ -1,19 +1,19 @@
-# 🎥 GEMBA LENS: AI time study and auto-written standard work
+# GEMBA LENS
 
-> **Status: planned for Jul–Oct 2027.** This page states the problem. Results will replace the targets below as they arrive.
+Status: not started. Planned for July to October 2027.
 
-## The problem
-Time studies are still done with a stopwatch and clipboard, ergonomic assessments by eye, and standard work instructions are written by hand over days. Can a laptop camera do all three from one video?
+## The question
 
-## Approach (built in rungs; each rung is shippable)
-1. **Automatic time study:** MediaPipe hand tracking → work-element boundaries → cycle-time distribution and bottleneck element, validated against a 30-cycle manual stopwatch study.
-2. **Ergonomic risk:** REBA score from body pose on every frame; riskiest moments flagged.
-3. **Standard work:** a vision-language model labels elements and drafts instructions with keyframes.
-4. **Line balancing:** split the task across stations to meet a takt time.
-5. **App:** upload a video, download the full report.
+Time studies are still mostly done with a stopwatch, ergonomic checks by eye, and work instructions are written by hand. How much of that can be done from one video of the task?
 
-## Target headline
-"Within X% of manual timing across 30 cycles; standard work generated in minutes instead of days."
+## How I plan to build it
+
+1. Track hands with MediaPipe, split the video into work elements, and time every cycle. Compare the results with a 30-cycle stopwatch study I do by hand in the foundations phase.
+2. Score ergonomic risk (REBA) from body posture on every frame and flag the worst moments.
+3. Use a vision-language model to label each element and draft standard work instructions with screenshots.
+4. Balance the task across two to four stations to meet a target takt time.
+5. Wrap it in an app: upload a video, get the report back.
 
 ## Data
-Self-recorded videos of repetitive assembly tasks. No other people are filmed.
+
+Videos of me doing repetitive tasks (LEGO assembly, packing). Nobody else is filmed.

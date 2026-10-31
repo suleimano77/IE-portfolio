@@ -1,85 +1,37 @@
-<div align="center">
+# IE Portfolio
 
-# Suleiman Qaryouti
+I'm an industrial engineering student at the German Jordanian University. This repo is where I learn in public and build three projects between November 2026 and October 2027.
 
-**Industrial Engineering · Operations Research · AI for Operations**
+Each project starts from a real operations problem and should end with a number and a recommendation, not just working code.
 
-German Jordanian University · building in public, Nov 2026 to Oct 2027
+## Projects
 
-![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
-![OR-Tools](https://img.shields.io/badge/OR--Tools-optimization-4285F4?logo=google&logoColor=white)
-![SimPy](https://img.shields.io/badge/SimPy-simulation-6E4C9E)
-![DuckDB](https://img.shields.io/badge/DuckDB-SQL-FFF000?logo=duckdb&logoColor=black)
-![MediaPipe](https://img.shields.io/badge/MediaPipe-vision-0097A7)
-![Streamlit](https://img.shields.io/badge/Streamlit-apps-FF4B4B?logo=streamlit&logoColor=white)
+**CHOKEPOINT** ([10-chokepoint](10-chokepoint/))
+How much stock does an importer need when a shipping lane closes? I'll use real Red Sea and Suez transit data to model an importer supplying warehouses in Aqaba and Hamburg, then work out the inventory policy that keeps shelves stocked at the lowest cost.
+Planned for January to April 2027.
 
-</div>
+**ANYCITY** ([20-anycity](20-anycity/))
+Route planning for an electric delivery fleet in any city, built from OpenStreetMap. It handles battery range, charging and delivery windows, and tests each plan against bad traffic days. I'll compare Amman, Munich and Hamburg.
+Planned for April to July 2027.
 
-> Classic industrial engineering methods (optimization, simulation, time study, inventory theory) with AI as the interface and the sensor. Every project ends in a number and a recommendation.
+**GEMBA LENS** ([30-gemba-lens](30-gemba-lens/))
+A time study from a video. It tracks my hands and posture while I do a repetitive task, times each step, scores ergonomic risk and drafts the work instructions. I'll check it against a stopwatch study I do by hand first.
+Planned for July to October 2027.
 
----
+## Foundations
 
-## Flagship projects
+Before the projects I'm working through Excel, Python, Lean basics and one warm-up analysis:
 
-### 🚢 [CHOKEPOINT](10-chokepoint/): supply chain shock digital twin
-*What happens to a company's shelves when a shipping lane closes?*
+- [01-excel](01-excel/): formulas, pivot tables, Power Query, Solver
+- [02-python-basics](02-python-basics/): CS50P problem sets
+- [03-lean-time-study](03-lean-time-study/): process mapping and a 30-cycle manual time study
+- [04-dataco-warmup](04-dataco-warmup/): why deliveries arrive late in the DataCo supply chain dataset
 
-Real Red Sea / Suez transit data drives a digital twin of an importer supplying **Aqaba 🇯🇴 and Hamburg 🇩🇪** from Asia. It measures how disruptions stretch lead times, forecasts demand, and optimizes the inventory policy that holds service level at the lowest cost. An LLM scenario analyst answers "what if" questions by running the twin.
+The week-by-week plan is in [00-plan/PLAN.md](00-plan/PLAN.md).
 
-`DuckDB` `pandas` `LightGBM` `SimPy` `PuLP` `inventory theory` `LLM tool use` · **Status: planned (Jan–Apr 2027)**
-
-### 🚐 [ANYCITY](20-anycity/): electric last-mile fleet lab
-*Type any city. Get an optimized electric delivery fleet, stress-tested.*
-
-It pulls any city's road network from OpenStreetMap, generates realistic demand, and routes an **electric** van fleet with battery range, charging stops and time windows. Plans are stress-tested against 1,000 random traffic days, and a dispatcher can change them in plain language. Benchmarked on **Amman, Munich and Hamburg**.
-
-`OR-Tools` `OSMnx` `E-VRP` `SimPy` `LLM agents` `geospatial` · **Status: planned (Apr–Jul 2027)**
-
-### 🎥 [GEMBA LENS](30-gemba-lens/): AI time study and auto-written standard work
-*Point a camera at a manual task. Get the time study, ergonomic risk and work instructions.*
-
-Hand and pose tracking split a video into work elements, time every cycle and find the bottleneck. It scores **REBA ergonomic risk** frame by frame, balances the task across stations to meet a takt time, and has a vision-language model write the standard work instructions.
-
-`OpenCV` `MediaPipe` `time study` `REBA` `line balancing` `multimodal AI` · **Status: planned (Jul–Oct 2027)**
-
----
-
-## Skills map
-
-| | CHOKEPOINT | ANYCITY | GEMBA LENS |
-| --- | :-: | :-: | :-: |
-| Optimization (LP / IP / VRP) | ● | ● | ● |
-| Discrete-event simulation | ● | ● | |
-| Statistics & ML forecasting | ● | ● | ● |
-| SQL | ● | | |
-| Geospatial | | ● | |
-| Computer vision | | | ● |
-| Lean, time study, ergonomics | | | ● |
-| LLM agents / multimodal AI | ● | ● | ● |
-| Apps & dashboards | ● | ● | ● |
-
-## Foundations log
-
-| | Folder | Status |
-| --- | --- | --- |
-| Excel: formulas, pivots, Power Query, Solver | [01-excel](01-excel/) | 🔄 in progress |
-| Python (CS50P problem sets) | [02-python-basics](02-python-basics/) | ⏳ |
-| Lean & manual time study (30 cycles) | [03-lean-time-study](03-lean-time-study/) | ⏳ |
-| DataCo late-delivery analysis (warm-up) | [04-dataco-warmup](04-dataco-warmup/) | ⏳ |
-
-Full roadmap: [00-plan/PLAN.md](00-plan/PLAN.md)
-
-## Run it
+## Running the code
 
 ```bash
 uv sync
 uv run jupyter lab
 ```
-
----
-
-<div align="center">
-
-📫 [LinkedIn](#) · Open to operations, supply chain and OR internships for 2028 · Deutsch: learning toward B2
-
-</div>
