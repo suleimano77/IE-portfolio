@@ -1,6 +1,6 @@
 # Suleiman: IE Career Build Plan, v13 (Nov 2026 to Oct 2027)
 
-As of: 2026-10-31. Revises v12. The employer's verdict, Phase 1, German, certificates and LinkedIn are unchanged. **v13 replaces all three flagships** with international, AI-era projects that each combine a hard industrial engineering method with modern tooling.
+As of: 2026-10-31, with ML and LLM study added on 2026-11-24 (Kaggle ML in weeks 15 and 19, and a Year 2 section). Revises v12. The employer's verdict, Phase 1, German, certificates and LinkedIn are unchanged. **v13 replaces all three flagships** with international, AI-era projects that each combine a hard industrial engineering method with modern tooling.
 
 ## The employer's verdict (unchanged)
 
@@ -104,11 +104,11 @@ Headline target: "Within X% of manual timing across 30 cycles; instructions gene
 | Week | Focus | Deliverable |
 | --- | --- | --- |
 | 13 to 14 | Finish CS50P (regex, OOP, tests); SQL basics in DuckDB | Tests on own code; SQL notebook |
-| 15 | Statistics: distributions, CIs, bootstrapping | Stats added to DataCo report |
+| 15 | Statistics: distributions, CIs, bootstrapping. Kaggle Learn: Intro to Machine Learning | Stats added to DataCo report; Kaggle course done |
 | 16 | PortWatch data in DuckDB; disruption timeline | Transit-count charts per chokepoint |
 | 17 | Lead-time distributions per scenario | Fitted distributions |
 | 18 | Safety stock / reorder point under variable lead time | **MVP shipped**: README + post |
-| 19 to 20 | Forecasting: baselines vs LightGBM, backtesting | Rung 2 |
+| 19 to 20 | Kaggle Learn: Intermediate Machine Learning first, so you know how to test a model on data it hasn't seen. Then forecasting: baselines vs LightGBM, backtesting | Rung 2 |
 | 21 | SimPy network twin | Rung 3 |
 | 22 | Scenario optimization in PuLP | Rung 4 |
 | 23 | Streamlit + LLM scenario analyst | Rung 5 |
@@ -146,6 +146,19 @@ Weeks 25 to 28 overlap spring exams. The timeline is a guide.
 | 48 | Buffer | |
 
 From week 37, in parallel: list 20 to 30 target companies and apply. **If you're behind, cut rungs, never the applications.**
+
+## Year 2: ML and LLMs in depth (Nov 2027 to Oct 2028)
+
+The flagships use ML and LLMs. This year teaches how they work, so you can explain and defend what you built. Same pace, 4 to 6 hours a week; the internship hunt and German come first.
+
+Python stays CS50P. [30 Days of Python](https://github.com/Asabeneh/30-Days-Of-Python) is extra practice when a CS50P week is hard, not a second course.
+
+| Months | Learn | Finish with |
+| --- | --- | --- |
+| Nov to Feb | Andrew Ng's Machine Learning Specialization (Coursera, free to audit): regression, classification, trees, neural networks, evaluation | Redo CHOKEPOINT's forecast and explain in the README why the model works and where it fails |
+| Mar to May | Andrej Karpathy's "Neural Networks: Zero to Hero" (YouTube): build a neural network, then a small GPT, from scratch | A small GPT trained on text of your choice, in the repo |
+| Jun to Jul | Anthropic's courses (github.com/anthropics/courses): prompting, tool use, checking the model's answers | One flagship's LLM part rebuilt with a test set, cost per use and refusal rules |
+| Aug to Oct | Buffer | |
 
 ## Certificates
 
