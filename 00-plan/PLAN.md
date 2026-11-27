@@ -90,7 +90,7 @@ Headline target: "Within X% of manual timing across 30 cycles; instructions gene
 | --- | --- | --- |
 | 1 | Setup (done). Excel: formulas, absolute refs, IF, XLOOKUP, pivot tables | One course problem set rebuilt in Excel |
 | 2 | Excel: Power Query cleaning, charts, Solver product-mix model | Working Solver model |
-| 3 to 4 | Python basics (CS50P weeks 0 to 2), Claude in Learning mode | Problem sets in repo |
+| 3 to 4 | Python basics (CS50P weeks 0 to 2), Claude in Learning mode | Own small programs in repo; CS50 problem sets submitted through submit50, not posted publicly |
 | 5 | Lean: 8 wastes, value stream mapping, takt, cycle time, OEE | VSM of a process you know |
 | 6 | Time study: hand-time a repetitive task 30 times; analyse in Python. **Film it too**; this is GEMBA LENS's validation data | Histogram + video saved |
 | 7 to 8 | Yellow Belt prep and exam; CS50P weeks 3 to 6 | Certificate 1 |
